@@ -1,82 +1,38 @@
 import 'package:blinkit/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget{
-
+class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   TextEditingController searchController = TextEditingController();
 
   var data = [
-    {
-      'img' : 'image 50.png',
-      'text' : 'Lights, Diyas \n & Candles'
-    },
-    {
-      'img' : 'image 51.png',
-      'text' : 'Diwali \n Gifts'
-    },
-    {
-      'img' : 'image 52.png',
-      'text' : 'Appliances \n & Gadgets'
-    },
-    {
-      'img' : 'image 53.png',
-      'text' : 'Home \n & Living'
-    },{
-      'img' : 'image 52.png',
-      'text' : 'Appliances \n & Gadgets'
-    },
-    {
-      'img' : 'image 53.png',
-      'text' : 'Home \n & Living'
-    }
+    {'img': 'image 50.png', 'text': 'Lights, Diyas \n & Candles'},
+    {'img': 'image 51.png', 'text': 'Diwali \n Gifts'},
+    {'img': 'image 52.png', 'text': 'Appliances \n & Gadgets'},
+    {'img': 'image 53.png', 'text': 'Home \n & Living'},
+    {'img': 'image 52.png', 'text': 'Appliances \n & Gadgets'},
+    {'img': 'image 53.png', 'text': 'Home \n & Living'},
   ];
-
   var products = [
     {
-      'img' : 'image 54 (1).png',
-      'text' : 'Golden Glass \n Wooden Lid Candle (Oudh)'
+      'img': 'image 54 (1).png',
+      'text': 'Golden Glass \n Wooden Lid Candle (Oudh)',
     },
-    {
-      'img' : 'image 57.png',
-      'text' : 'Royal Gulab Jamun \n By Bikano'
-    },
-    {
-      'img' : 'image 63 (2).png',
-      'text' : 'Bikaji Bhujia'
-    },
-    {
-      'img' : 'image 46.png',
-      'text' : 'Hybrid Tomato'
-    },
+    {'img': 'image 57.png', 'text': 'Royal Gulab Jamun \n By Bikano'},
+    {'img': 'image 63 (2).png', 'text': 'Bikaji Bhujia'},
+    {'img': 'image 46.png', 'text': 'Hybrid Tomato'},
   ];
 
   var grocery = [
-    {
-      'img' : 'image 46 (1).png',
-      'text' : 'Vegetables & \n Fruits'
-    },
-    {
-      'img' : 'image 46 (2).png',
-      'text' : 'Atta, Dal & \n Rice'
-    },
-    {
-      'img' : 'image 46 (3).png',
-      'text' : 'Oil, Ghee & \n Masala'
-    },
-    {
-      'img' : 'image 46 (4).png',
-      'text' : 'Dairy, Bread & \n Milk'
-    },
-    {
-      'img' : 'image10.png',
-      'text' : 'Biscuits & \n Bakery'
-    },
+    {'img': 'image 46 (1).png', 'text': 'Vegetables & \n Fruits'},
+    {'img': 'image 46 (2).png', 'text': 'Atta, Dal & \n Rice'},
+    {'img': 'image 46 (3).png', 'text': 'Oil, Ghee & \n Masala'},
+    {'img': 'image 46 (4).png', 'text': 'Dairy, Bread & \n Milk'},
+    {'img': 'image10.png', 'text': 'Biscuits & \n Bakery'},
   ];
 
   @override
@@ -163,8 +119,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Positioned(
                   bottom: 25,
                   left: 20,
-                  child: UiHelper.CustomTextField(controller: searchController, text: "Search “ice-cream”"),
-                )
+                  child: UiHelper.CustomTextField(
+                    controller: searchController,
+                    text: "Search “ice-cream”",
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 1),
@@ -189,49 +148,54 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       UiHelper.CustomImage(img: 'image 56.png'),
                       UiHelper.CustomImage(img: 'image 61.png'),
-                    ]
+                    ],
                   ),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: ListView.builder(itemBuilder: (context, index){
-                        return Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 108,
-                            width: 86,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFEAD3D3),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-
-                            child: Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  UiHelper.CustomText(
-                                    text: data[index]['text'].toString(),
-                                    color: Color(0xFF000000),
-                                    fontweight: FontWeight.w700,
-                                    fontsize: 10,
-                                    fontFamily: 'Bold',
-                                  ),
-                                  SizedBox(height: 4),
-                                  Expanded(
-                                    child: UiHelper.CustomImage(img: data[index]['img'].toString()),
-                                  ),
-                                ]
+                      child: ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 108,
+                              width: 86,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFEAD3D3),
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                            )
 
-                          ),
-                        );
-                      }, itemCount: data.length, scrollDirection: Axis.horizontal,),
+                              child: Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    UiHelper.CustomText(
+                                      text: data[index]['text'].toString(),
+                                      color: Color(0xFF000000),
+                                      fontweight: FontWeight.w700,
+                                      fontsize: 10,
+                                      fontFamily: 'Bold',
+                                    ),
+                                    SizedBox(height: 4),
+                                    Expanded(
+                                      child: UiHelper.CustomImage(
+                                        img: data[index]['img'].toString(),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                        itemCount: data.length,
+                        scrollDirection: Axis.horizontal,
+                      ),
                     ),
                   ),
-                ]
-              )
+                ],
+              ),
             ),
             SizedBox(height: 20),
             SizedBox(
@@ -266,7 +230,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             Positioned(
                               right: 0,
                               bottom: -7,
-                              child: UiHelper.CustomButton(text: 'ADD', onPressed: () {}),
+                              child: UiHelper.CustomButton(
+                                text: 'ADD',
+                                onPressed: () {},
+                              ),
                             ),
                           ],
                         ),
@@ -314,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontFamily: 'Bold',
                             ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   );
@@ -352,7 +319,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
-                            child: UiHelper.CustomImage(img: grocery[index]['img'].toString()),
+                            child: UiHelper.CustomImage(
+                              img: grocery[index]['img'].toString(),
+                            ),
                           ),
                         ),
                         SizedBox(height: 8),
@@ -362,7 +331,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontweight: FontWeight.w500,
                           fontsize: 10,
                           fontFamily: 'Bold',
-                        )
+                        ),
                       ],
                     ),
                   );
