@@ -30,6 +30,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Color(0xFFEC0505),
+        unselectedItemColor: Color(0xFF9C9C9C),
+        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        backgroundColor: Colors.white,
         items: [
           BottomNavigationBarItem(
             icon: UiHelper.CustomImage(img: "home 1.png"),
