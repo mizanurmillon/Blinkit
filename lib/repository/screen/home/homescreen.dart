@@ -10,29 +10,29 @@ class _HomeScreenState extends State<HomeScreen> {
   TextEditingController searchController = TextEditingController();
 
   var data = [
-    {'img': 'image 50.png', 'text': 'Lights, Diyas \n & Candles'},
-    {'img': 'image 51.png', 'text': 'Diwali \n Gifts'},
-    {'img': 'image 52.png', 'text': 'Appliances \n & Gadgets'},
-    {'img': 'image 53.png', 'text': 'Home \n & Living'},
-    {'img': 'image 52.png', 'text': 'Appliances \n & Gadgets'},
-    {'img': 'image 53.png', 'text': 'Home \n & Living'},
+    {'img': 'image 50.png', 'text': 'Lights, Diyas \n& Candles'},
+    {'img': 'image 51.png', 'text': 'Diwali \nGifts'},
+    {'img': 'image 52.png', 'text': 'Appliances \n& Gadgets'},
+    {'img': 'image 53.png', 'text': 'Home \n& Living'},
+    {'img': 'image 52.png', 'text': 'Appliances \n& Gadgets'},
+    {'img': 'image 53.png', 'text': 'Home \n& Living'},
   ];
   var products = [
     {
       'img': 'image 54 (1).png',
-      'text': 'Golden Glass \n Wooden Lid Candle (Oudh)',
+      'text': 'Golden Glass \nWooden Lid Candle (Oudh)',
     },
-    {'img': 'image 57.png', 'text': 'Royal Gulab Jamun \n By Bikano'},
+    {'img': 'image 57.png', 'text': 'Royal Gulab Jamun \nBy Bikano'},
     {'img': 'image 63 (2).png', 'text': 'Bikaji Bhujia'},
     {'img': 'image 46.png', 'text': 'Hybrid Tomato'},
   ];
 
   var grocery = [
-    {'img': 'image 46 (1).png', 'text': 'Vegetables & \n Fruits'},
-    {'img': 'image 46 (2).png', 'text': 'Atta, Dal & \n Rice'},
-    {'img': 'image 46 (3).png', 'text': 'Oil, Ghee & \n Masala'},
-    {'img': 'image 46 (4).png', 'text': 'Dairy, Bread & \n Milk'},
-    {'img': 'image10.png', 'text': 'Biscuits & \n Bakery'},
+    {'img': 'image 46 (1).png', 'text': 'Vegetables & \nFruits'},
+    {'img': 'image 46 (2).png', 'text': 'Atta, Dal & \nRice'},
+    {'img': 'image 46 (3).png', 'text': 'Oil, Ghee & \nMasala'},
+    {'img': 'image 46 (4).png', 'text': 'Dairy, Bread & \nMilk'},
+    {'img': 'image10.png', 'text': 'Biscuits & \nBakery'},
   ];
 
   @override
